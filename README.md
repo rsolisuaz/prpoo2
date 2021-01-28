@@ -20,11 +20,20 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    - test framework: **4** *(JUnit Jupiter)*
    - project name: **prac01**
    - source package: **poo2.prac01**
-2. Usando el editor de su preferencia, crear el archivo **ConjuntoEnteros.java** dentro de la carpeta app/src/main/java/poo2/prac01
+2. Usando el editor de su preferencia, abra el archivo build.gradle ubicado en la carpeta app y haga los siguientes cambios:
+   - Agregue a la sección plugins las siguientes línea:
+    `id 'java'` 
+   - Agregue a la sección tasks.named('test') la siguiente línea:
+     `testLogging {
+        events 'PASSED', 'FAILED', 'SKIPPED'
+     }
+     testLogging.showStandardStreams = true`
 
-3. Usando el editor de su preferencia, crear el archivo **ConjuntoEnterosTest.java** dentro de la carpeta app/src/test/java/poo2/prac01
+3. Usando el editor de su preferencia, crear el archivo **ConjuntoEnteros.java** dentro de la carpeta app/src/main/java/poo2/prac01
 
-4. En el archivo **ConjuntoEnteros.java** debe crear la clase **ConjuntoEnteros** la cual deberá cumplir con lo siguiente:
+4. Usando el editor de su preferencia, crear el archivo **ConjuntoEnterosTest.java** dentro de la carpeta app/src/test/java/poo2/prac01
+
+5. En el archivo **ConjuntoEnteros.java** debe crear la clase **ConjuntoEnteros** la cual deberá cumplir con lo siguiente:
    - Heredar de **Set &lt;Integer&gt;**
    - Tener dos atributos de tipo `Integer` y de nombre `limInf` y `limSup`, que representarán los límites mínimo y máximo que deberán tener los enteros a aceptarse en el `Set`, por ejemplo, si limInf=2 y limSup=100 solo se podrán agregar números al conjunto que estén en el rago de 2 al 100. 
    - Tener un atributo `valMax` de tipo `Integer` que represente el valor más grande que se pudiera haber guardado en el conjunto(null indicando que no hay aún datos)
