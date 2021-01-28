@@ -26,11 +26,7 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
     `id 'java'` 
    - Agregue a la sección tasks.named('test') las siguiente líneas:
 
-     `testLogging {`
-
-     `   events 'PASSED', 'FAILED', 'SKIPPED'`
-     
-     `}`
+     `testLogging { events 'PASSED', 'FAILED', 'SKIPPED'}`
      
      `testLogging.showStandardStreams = true`
 
@@ -39,14 +35,14 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
 4. Usando el editor de su preferencia, crear el archivo **ConjuntoEnterosTest.java** dentro de la carpeta app/src/test/java/poo2/prac01
 
 5. En el archivo **ConjuntoEnteros.java** debe crear la clase **ConjuntoEnteros** la cual deberá cumplir con lo siguiente:
-   - Heredar de **Set &lt;Integer&gt;**
+   - Heredar de **HashSet &lt;Integer&gt;**
    - Tener dos atributos de tipo `Integer` y de nombre `limInf` y `limSup`, que representarán los límites mínimo y máximo que deberán tener los enteros a aceptarse en el `Set`, por ejemplo, si limInf=2 y limSup=100 solo se podrán agregar números al conjunto que estén en el rago de 2 al 100. 
    - Tener un atributo `valMax` de tipo `Integer` que represente el valor más grande que se pudiera haber guardado en el conjunto(null indicando que no hay aún datos)
    - Tener un atributo `valMin` de tipo `Integer` que represente el valor más pequeño que se pudiera haber guardado en el conjunto (null indicando que no hay aún datos)
    - Todos los atributos deberán ser privados y por tanto deberán tener un getter para obtener su valor actual (`getLimInf, getLimSup, getValMin, getValMax`) y dos setters para modificar los límites mínimo y máximo de los valores a acepter (`setLimInf` y `setLimSup`)
-   - Un constructor vacío que inicializa limInf en cero y limSup en 100
    - Un constructor que reciba los valores a asignarse a `limInf` y `limSup` respectivamente
-   - El método add deberá redefinirse para solo agregar el elemento recibido como argumento si es que está dentro de los límites especificados por los valores actuales de `limInf` y `limSup`, además de actualizar `valMin` y `valMax` según corresponda si es que se puede agregar el dato recibido al conjunto 
+   - Un constructor vacío que inicializa limInf en cero y limSup en 100 (ayudándose del otro constructor)
+   - El método add (`public void add(Integer dato)`) deberá redefinirse para solo agregar el elemento recibido como argumento si es que está dentro de los límites especificados por los valores actuales de `limInf` y `limSup`, además de actualizar `valMin` y `valMax` según corresponda si es que se puede agregar el dato recibido al conjunto 
 
 5. En el archivo **ConjuntoEnterosTest.java** colocar el código que se puede bajar de la siguiente dirección:
 
