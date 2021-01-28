@@ -27,11 +27,8 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    - Agregue a la sección tasks.named('test') las siguiente líneas:
 
      `testLogging {`
-
      `   events 'PASSED', 'FAILED', 'SKIPPED'`
-
      `}`
-     
      `testLogging.showStandardStreams = true`
 
 3. Usando el editor de su preferencia, crear el archivo **ConjuntoEnteros.java** dentro de la carpeta app/src/main/java/poo2/prac01
