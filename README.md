@@ -21,12 +21,14 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    - project name: **prac01**
    - source package: **poo2.prac01**
 2. Usando el editor de su preferencia, abra el archivo build.gradle ubicado en la carpeta app y haga los siguientes cambios:
-   - Agregue a la sección plugins las siguientes línea:
+   - Agregue a la sección plugins la siguiente línea:
+
     `id 'java'` 
-   - Agregue a la sección tasks.named('test') la siguiente línea:
-     `testLogging {
-        events 'PASSED', 'FAILED', 'SKIPPED'
-     }
+   - Agregue a la sección tasks.named('test') las siguiente líneas:
+
+     `testLogging {\
+        events 'PASSED', 'FAILED', 'SKIPPED'\
+     }\
      testLogging.showStandardStreams = true`
 
 3. Usando el editor de su preferencia, crear el archivo **ConjuntoEnteros.java** dentro de la carpeta app/src/main/java/poo2/prac01
@@ -45,7 +47,7 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
 
 5. En el archivo **ConjuntoEnterosTest.java** colocar el código que se puede bajar de la siguiente dirección:
 
-
+a
 ## NOTAS IMPORTANTES
 1)	Es necesario estar guardando los cambios realizados usando **git add** y **git commit**
 2)	Una vez que esté seguro de que funciona correctamente (verificando con **gradle test**) suba su copia local al repositorio remoto usando el comando **git push**
