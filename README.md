@@ -37,7 +37,7 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    ```
    List<String> r = procesaListaNumeros(datos, codigoIdioma, codigoPais);
    ```
-   Entonces, si imprimeramos los Strings en r deberíamos verlos de la siguiente manera:
+   Entonces, si imprimieramos los Strings en r deberíamos verlos de la siguiente manera:
    ```
    $34.25
    $46.20
@@ -49,9 +49,9 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
 ```
 gradle run -q --console=plain > salida.txt
 ```
-Esto guardaría la salida que genera el programa en un archivo de nombre salida.txt que pudiera abrir en un editor de texto tal como Sublime, ahí si deberían verse los caracteres de moneda sin problemas (El nombre del archivo a donde redirige puede ser el que usted desee)
+Esto guardaría la salida que genera el programa en un archivo de nombre **salida.txt**, el cual se puede abrir en un editor de texto tal como Sublime, donde si deberían verse los caracteres de moneda sin problemas (El nombre del archivo a donde redirige puede ser el que usted desee)
 
-3. Se proporciona un archivo para hacer pruebas de su código, ejecuta **gradle test** para ver el resultado de tales pruebas y determinar la calificación que obtendría.
+3. Se proporciona un archivo (**ProcesadorDatosTest.java**, el cual **NO DEBEN DE MODIFICAR**) para hacer pruebas  de su código, ejecute **gradle test** para ver el resultado de tales pruebas y determinar la calificación que obtendría.
 
 ## NOTAS IMPORTANTES
 1)	Es necesario estar guardando los cambios realizados en el punto 1 de manera atómica usando **git add** y **git commit**
