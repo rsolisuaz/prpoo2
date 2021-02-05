@@ -25,9 +25,7 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    d) Por ejemplo si tenemos una lista de nombre datos con los siguientes Strings (cada linea representa uno de los Strings de la lista recibida):
 
    ```hola
-   
    46.2
-   
    17015
    
    34.246
