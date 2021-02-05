@@ -22,7 +22,7 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    a) El método recibe 3 argumentos, el primero contiene una lista de Strings que pudieran contener cualquier texto, el segundo representa un código de idioma de dos letras y el tercero un código de país de dos letras (que puede ser null para indicar que no se desea especificar un código de país.)
    b) El método debe recorrer la lista de Strings recibida como primer argumento y solo debe tomar en cuenta los strings que contengan un valor double (se puede ayudar de Double.parseDouble para determinar esto).
    c) Las valores double obtenenidos de las lineas que se aceptarán de acuerdo al inciso anterior deben ser ordenadas del menor valor al mayor y debe regresarse una lista de Strings que representan esos valores formateados como valor monetario de acuerdo al codigo de idioma y pais dados como segundo argumento.
-   d) Por ejemplo si tenemos una lista de nombre datos con los siguientes Strings (cada linea representa uno de los Strings de la lista recibida):
+   d) Por ejemplo si tenemos una lista de nombre datos con los siguientes Strings (cada linea representa uno de los Strings) en datos:
    ```hola
    46.2
    17015
@@ -33,7 +33,18 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    un millon
    781.23
    ```
-
+   y dos Strings codigoIdioma="es", codigoPais="MX", y hacemos una llamada como la siguiente:
+   ```
+   List<String> r = procesaprocesaListaNumeros(datos, codigoIdioma, codigoPais);
+   ```
+   Entonces, si imprimeramos los Strings en r deberíamos verlos de la siguiente manera:
+   ```
+   $34.25
+   $46.20
+   $781.23
+   $2,107.71
+   $17,015.00
+   ``` 
 4. Usando el editor de su preferencia, crear el archivo **ConjuntoEnterosTest.java** dentro de la carpeta app/src/test/java/poo2/prac01
 
 5. Ejecute el comando `git add .` seguido de `git commit -m "Inicialización de Proyecto"` para tomar el primer snapshot del proyecto.
