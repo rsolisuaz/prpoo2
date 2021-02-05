@@ -16,6 +16,7 @@ Como primer paso, será necesario crear una copia local del repositorio remoto c
 Una vez que tenga el repositorio local y esté ubicado en la consola o terminal, su trabajo consiste en lo siguiente:
 
 1. Usando el editor de su preferencia, completar el código de la clase ProcesadorDatos del archivo **ProcesadorDatos.java** ubicado en la carpeta app/src/main/java/poo2/prac02, el cual contiene un solo método de nombre **procesaListaNumeros**, esté metodo tiene la siguiente firma:
+
 `public List<String> procesaListaNumeros(
     List<String> lineas,
     String codIdioma, String codPais)`
@@ -24,16 +25,24 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
     b) El método debe recorrer la lista de Strings recibida como primer argumento y solo debe tomar en cuenta los strings que contengan un valor double (se puede ayudar de Double.parseDouble para determinar esto).
     c) Las valores double obtenenidos de las lineas que se aceptarán de acuerdo al inciso anterior deben ser ordenadas del menor valor al mayor y debe regresarse una lista de Strings que representan esos valores formateados como valor monetario de acuerdo al codigo de idioma y pais dados como segundo argumento.
     d) Por ejemplo si tenemos una lista de nombre datos con los siguientes Strings (cada linea representa uno de los Strings de la lista recibida):
-    `hola\
-    46.2\
-    17015\
-    34.246\
-    nuevo amigo mio\
-    juan gana 2891.23 a la semana\
-    2107.71\
-    un millon\
+    `hola
+    \
+    46.2
+    \
+    17015
+    \
+    34.246
+    \
+    nuevo amigo mio
+    \
+    juan gana 2891.23 a la semana
+    \
+    2107.71
+    \
+    un millon
+    \
     781.23`
-    
+
 4. Usando el editor de su preferencia, crear el archivo **ConjuntoEnterosTest.java** dentro de la carpeta app/src/test/java/poo2/prac01
 
 5. Ejecute el comando `git add .` seguido de `git commit -m "Inicialización de Proyecto"` para tomar el primer snapshot del proyecto.
