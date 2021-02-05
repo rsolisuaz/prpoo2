@@ -17,9 +17,7 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
 
 1. Usando el editor de su preferencia, completar el código de la clase ProcesadorDatos del archivo **ProcesadorDatos.java** ubicado en la carpeta app/src/main/java/poo2/prac02, el cual contiene un solo método de nombre **procesaListaNumeros**, esté metodo tiene la siguiente firma:
 
-`public List<String> procesaListaNumeros(
-    List<String> lineas,
-    String codIdioma, String codPais)`
+`public List<String> procesaListaNumeros(List<String> lineas,String codIdioma, String codPais)`
 
     a) El método recibe 3 argumentos, el primero contiene una lista de Strings que pudieran contener cualquier texto, el segundo representa un código de idioma de dos letras y el tercero un código de país de dos letras (que puede ser null para indicar que no se desea especificar un código de país.)
     b) El método debe recorrer la lista de Strings recibida como primer argumento y solo debe tomar en cuenta los strings que contengan un valor double (se puede ayudar de Double.parseDouble para determinar esto).
