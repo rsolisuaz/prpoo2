@@ -45,7 +45,11 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    $2,107.71
    $17,015.00
    ``` 
-2. Se proporciona el archivo **Main.java** en la carpeta app/src/main/java/poo2/prac02, que contiene un método main que crea una lista de Strings, un String para el codigo de Idioma y otro para el codigo de Pais y manda llamar a **procesaListaNumeros** con esos datos imprimiendo lo que regresa. Puedes modificarlo agregando o quitando strings a agregar a la lista y modificando el valor del codigo de Idioma y codigo del pais para verificar que el código del método **procesaListaNumeros** funciona correctamente (esto es completamente opcional, y para ejecutarlo se da el comando **gradle run**). NOTA: En Windows es posible que los caracteres de moneda no se muestren correctamente, esto es problema de la consola o ventana de comandos, no del programa en Java.
+2. Se proporciona el archivo **Main.java** en la carpeta app/src/main/java/poo2/prac02, que contiene un método main que crea una lista de Strings, un String para el codigo de Idioma y otro para el codigo de Pais y manda llamar a **procesaListaNumeros** con esos datos imprimiendo lo que regresa. Puedes modificarlo agregando o quitando strings a agregar a la lista y modificando el valor del codigo de Idioma y codigo del pais para verificar que el código del método **procesaListaNumeros** funciona correctamente (esto es completamente opcional, y para ejecutarlo se da el comando **gradle run -q --console=plain**). NOTA: En Windows es posible que los caracteres de moneda no se muestren correctamente, esto es problema de la consola o ventana de comandos, no del programa en Java. Si este es el caso, lo que se puede hacer es redirigir la salida usando algo como lo siguiente:
+```
+gradle run -q --console=plain > salida.txt
+```
+Esto guardaría la salida que genera el programa en un archivo de nombre salida.txt que pudiera abrir en un editor de texto tal como Sublime, ahí si deberían verse los caracteres de moneda sin problemas (El nombre del archivo a donde redirige puede ser el que usted desee)
 
 3. Se proporciona un archivo para hacer pruebas de su código, ejecuta **gradle test** para ver el resultado de tales pruebas y determinar la calificación que obtendría.
 
