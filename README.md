@@ -22,7 +22,7 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    a) El método recibe 3 argumentos, el primero contiene una lista de Strings que pudieran contener cualquier texto, el segundo representa un código de idioma de dos letras y el tercero un código de país de dos letras (que puede ser null para indicar que no se desea especificar un código de país.)
    b) El método debe recorrer la lista de Strings recibida como primer argumento y solo debe tomar en cuenta los strings que contengan un valor double (se puede ayudar de Double.parseDouble para determinar esto).
    c) Las valores double obtenenidos de las lineas que se aceptarán de acuerdo al inciso anterior deben ser ordenadas del menor valor al mayor y debe regresarse una lista de Strings que representan esos valores formateados como valor monetario de acuerdo al codigo de idioma y pais dados como segundo argumento.
-   d) Por ejemplo si tenemos una lista de nombre datos con los siguientes Strings (cada linea representa uno de los Strings) en datos:
+   d) Por ejemplo si tenemos una lista de Strings de nombre datos con los siguientes Strings (cada linea representa uno de los Strings la lista):
    ```hola
    46.2
    17015
@@ -35,7 +35,7 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    ```
    y dos Strings codigoIdioma="es", codigoPais="MX", y hacemos una llamada como la siguiente:
    ```
-   List<String> r = procesaprocesaListaNumeros(datos, codigoIdioma, codigoPais);
+   List<String> r = procesaListaNumeros(datos, codigoIdioma, codigoPais);
    ```
    Entonces, si imprimeramos los Strings en r deberíamos verlos de la siguiente manera:
    ```
@@ -45,27 +45,11 @@ Una vez que tenga el repositorio local y esté ubicado en la consola o terminal,
    $2,107.71
    $17,015.00
    ``` 
-4. Usando el editor de su preferencia, crear el archivo **ConjuntoEnterosTest.java** dentro de la carpeta app/src/test/java/poo2/prac01
+2. Se proporciona el archivo **Main.java** en la carpeta app/src/main/java/poo2/prac02, que contiene un método main que crea una lista de Strings, un String para el codigo de Idioma y otro para el codigo de Pais y manda llamar a **procesaListaNumeros** con esos datos imprimiendo lo que regresa. Puedes modificarlo agregando o quitando strings a agregar a la lista y modificando el valor del codigo de Idioma y codigo del pais para verificar que el código del método **procesaListaNumeros** funciona correctamente (esto es completamente opcional)
 
-5. Ejecute el comando `git add .` seguido de `git commit -m "Inicialización de Proyecto"` para tomar el primer snapshot del proyecto.
-
-6. En el archivo **ConjuntoEnterosTest.java** colocar el código que se puede encuentra de la siguiente dirección: https://pastebin.com/Ut4Mt9eM (dando click en raw, copiando y pegando en el archivo)
-
-7. Ejecute el comando `git add app/src/test/java/poo2/prac01/ConjuntoEnterosTest.java` seguido de `git commit -m "Se agrega código al archivo de pruebas ConjuntoEnterosTest"`.
-
-8. En el archivo **ConjuntoEnteros.java** debe crear la clase **ConjuntoEnteros** la cual deberá cumplir con lo siguiente:
-   - Heredar de **HashSet &lt;Integer&gt;**
-   - Tener dos atributos de tipo `Integer` y de nombre `limInf` y `limSup`, que representarán los límites mínimo y máximo que deberán tener los enteros a aceptarse en el `Set`, por ejemplo, si limInf=2 y limSup=100 solo se podrán agregar números al conjunto que estén en el rago de 2 al 100. 
-   - Tener un atributo `valMax` de tipo `Integer` que represente el valor más grande que se pudiera haber guardado en el conjunto(null indicando que no hay aún datos)
-   - Tener un atributo `valMin` de tipo `Integer` que represente el valor más pequeño que se pudiera haber guardado en el conjunto (null indicando que no hay aún datos)
-   - Todos los atributos deberán ser privados y por tanto la clase deberá tener getters públicos para obtener el valor actual de cada uno de estos atributos (`getLimInf, getLimSup, getValMin, getValMax`) y dos setters públicos para modificar los límites mínimo y máximo de los valores a aceptar (`setLimInf` y `setLimSup`)
-   - Un constructor que reciba los valores a asignarse a `limInf` y `limSup` respectivamente, y que los asigna de tal forma que en limInf queda el menor valor de los recibidos y en limSup el valor mayor de los recibidos.
-   - Un constructor vacío que inicializa limInf en cero y limSup en 100 (ayudándose del otro constructor)
-   - El método add (`public boolean add(Integer dato)`) deberá redefinirse para que se comporte de la siguiente manera:
-   - Si el elemento recibido (`dato`) no está dentro de los límites especificados por los valores actuales de `limInf` y `limSup` debe regresar false. 
-   - Si el elemento recibido (`dato`) cumple con los límites, debe llamar al método add de la clase padre para agregar el dato y si tal llamada regresa true, deberá también actualizar el valor de los atributos `valMin` y `valMax` según corresponda. En este caso en que el elemento recibido cumple con los límites, debe regresar lo que regrese la llamada a add de la clase padre.  
+3. Se proporciona un archivo para hacer pruebas de su código, ejecuta **gradle test** para ver el resultado de tales pruebas y determinar la calificación que obtendría.
 
 ## NOTAS IMPORTANTES
-1)	Es necesario estar guardando los cambios realizados en el punto 8 de manera atómica usando **git add** y **git commit**
+1)	Es necesario estar guardando los cambios realizados en el punto 1 de manera atómica usando **git add** y **git commit**
 2)	Una vez que esté seguro de que funciona correctamente (verificando con **gradle test**) suba su copia local al repositorio remoto usando el comando **git push**
-3)	Cada vez que haga git push se realizaran automáticamente pruebas sobre su código para verificar si funciona correctamente. La calificación será mostrada al final de la prueba en un mensaje de salida que tiene el formato `ConjuntoEnterosTest STANDARD_OUT Calificacion:XX/100` (**NO ES LA QUE DICE `POINTS XX/100`**). Verifique que en la página de su repositorio en la sección **Pull Requests**, se encuentra una subsección de nombre **Feedback**, ahí podrá encontrar los resultados de las pruebas en la sección **Check** (dando click en Github Classroom Workflow->Autograding->Run education/autograding@v1) y cualquier comentario general que el profesor tenga sobre su código en la pestaña **Conversation**. También es posible que haya comentarios sobre líneas de código específicas en la pestaña **Files Changed**. **NO BORRE ESTA SUBSECCIÓN DE FEEDBACK NI CIERRE EL PULL REQUEST**. Si tiene preguntas sobre los comentarios que le haya dejado el profesor, escríbalas en la pestaña **Conversation** usando el área de texto que se encuentra hasta abajo asegurándose de dar click en **Comment** una vez tecleada la pregunta.
+3)	Cada vez que haga git push se realizaran automáticamente pruebas sobre su código para verificar si funciona correctamente. La calificación será mostrada al final de la prueba en un mensaje de salida que tiene el formato `ProcesadorDatosTest STANDARD_OUT Calificacion:XX/100` (**NO ES LA QUE DICE `POINTS XX/100`**). Verifique que en la página de su repositorio en la sección **Pull Requests**, se encuentra una subsección de nombre **Feedback**, ahí podrá encontrar los resultados de las pruebas en la sección **Check** (dando click en Github Classroom Workflow->Autograding->Run education/autograding@v1) y cualquier comentario general que el profesor tenga sobre su código en la pestaña **Conversation**. También es posible que haya comentarios sobre líneas de código específicas en la pestaña **Files Changed**. **NO BORRE ESTA SUBSECCIÓN DE FEEDBACK NI CIERRE EL PULL REQUEST**. Si tiene preguntas sobre los comentarios que le haya dejado el profesor, escríbalas en la pestaña **Conversation** usando el área de texto que se encuentra hasta abajo asegurándose de dar click en **Comment** una vez tecleada la pregunta.
